@@ -47,6 +47,7 @@ test ("test charcter", () => {
   const received8 = bow.health;
   const expected8 = 0;
   expect(received8).toEqual(expected8);
+  // заменить тесты для 3 задачи
 })
 
   
