@@ -1,4 +1,4 @@
-export {Character, Bowman};
+// export {Character, Bowman};
 
 class Character {
   constructor(name, type, attack, defence) {
@@ -8,6 +8,8 @@ class Character {
     this.defence = defence;
     this.level = 1;
     this.health = 100;
+    this.power = false;
+    this.attackValue = 0;
   }
   damage(points) {
     if (this.health >= 0) {
@@ -22,6 +24,18 @@ class Character {
       this.health = 100;
     } else {
       throw Error("нельзя повысить уровень умершего");
+    }
+  }
+  
+  get powerMode() {
+    if (this.attackValue < 3) {
+      this.power = true; 
+      this.attackValue ++; 
+      this.attack = this.attack * 2;
+      this.defence = this.defence * 2;
+      this.health = this.health * 2;
+    } else {
+      this.power = false;
     }
   }
 }
