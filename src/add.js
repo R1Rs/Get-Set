@@ -1,6 +1,4 @@
-// export {Character, Bowman};
-
-class Character {
+export default class Character {
   constructor(name, type, attack, defence) {
     this.name = name;
     this.type = type;
@@ -40,11 +38,4 @@ class Character {
   }
 }
 
-class Bowman extends Character {
-   constructor(name) {
-     super(name);
-     this.type = "Bowman";
-     this.attack = 25;
-     this.defence = 25;
-   }
-}
+
